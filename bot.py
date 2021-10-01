@@ -20,7 +20,7 @@ def report():
 
 
     
-schedule.every().day.at("19:00").do(report)
+schedule.every().day.at("19:10").do(report)
 
 while True:
     schedule.run_pending()
