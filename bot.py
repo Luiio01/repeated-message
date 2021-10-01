@@ -5,8 +5,8 @@ import requests
 
 def telegram_bot_sendtext(bot_message):
     
-    bot_token = ''
-    bot_chatID = ''
+    bot_token = '2046245224:AAFnqiF1yAxTpV4Q1BpmVw-mD3ubrYXrL64'
+    bot_chatID = '2046245224'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
 
     response = requests.get(send_text)
@@ -15,13 +15,12 @@ def telegram_bot_sendtext(bot_message):
 
 
 def report():
-    my_balance = 10   ## Replace this number with an API call to fetch your account balance
-    my_message = "Current balance is: {}".format(my_balance)   ## Customize your message
+ my_message = "sono io il primo ".   ## Customize your message
     telegram_bot_sendtext(my_message)
 
 
     
-schedule.every().day.at("12:00").do(report)
+schedule.every().day.at("19:00").do(report)
 
 while True:
     schedule.run_pending()
